@@ -1,0 +1,1 @@
+export const TOKEN_SECRET = 'Point_of_sale'
