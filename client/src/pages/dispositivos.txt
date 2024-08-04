@@ -1,0 +1,2 @@
+equipos, canal, usuario, contraseña, ip, lugar (ubucacion), 
+encargados, numero de telefono, referencia y apartado para notificaciones donde muestre un historial

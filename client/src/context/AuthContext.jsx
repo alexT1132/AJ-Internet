@@ -29,6 +29,7 @@ export const AuthProvider = ({children}) => {
             RegisterDone();
         } catch (error) {
             setErrors(error);
+            console.log(error);
         }
     }
 

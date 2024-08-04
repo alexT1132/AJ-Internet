@@ -1,6 +1,8 @@
 import { FaUserCircle, FaKey, FaUsers, FaServer, FaTicketAlt, FaPowerOff } from "react-icons/fa";
-import { MdDashboard } from "react-icons/md";
+import { MdDashboard, MdHistory } from "react-icons/md";
 import { BiTask } from "react-icons/bi";
+import { IoLocationSharp } from "react-icons/io5";
+
 
 import "../css/Dashboard.css";
 import { Link } from "react-router-dom";
@@ -50,16 +52,36 @@ function Dashboard() {
                     </Link>
                 </li>
                 <li>
-                    <a>
-                        <FaServer className="i" />
-                        <div>Dispositivos</div>
-                    </a>
+                    <Link to='/history'>
+                        <a>
+                            <MdHistory className="i" />
+                            <div>Historial</div>
+                        </a>
+                    </Link>
                 </li>
                 <li>
-                    <a>
-                        <FaTicketAlt className="i" />
-                        <div>Fichas</div>
-                    </a>
+                    <Link to='/dispositivos'>
+                        <a>
+                            <FaServer className="i" />
+                            <div>Dispositivos</div>
+                        </a>
+                    </Link>
+                </li>
+                <li>
+                    <Link to='/localidades'>
+                        <a>
+                            <IoLocationSharp className="i" />
+                            <div>Localidades</div>
+                        </a>
+                    </Link>
+                </li>
+                <li>
+                    <Link to='/fichas'>
+                        <a>
+                            <FaTicketAlt className="i" />
+                            <div>Fichas</div>
+                        </a>
+                    </Link>
                 </li>
                 <li>
                     <Link to='/task'>
@@ -70,12 +92,12 @@ function Dashboard() {
                     </Link>
                 </li>
                 <li>
-                <Link to='/' onClick={() => {logout()}}>
-                    <a>
-                        <FaPowerOff className="i" />
-                        <div>Cerrar session</div>
-                    </a>
-                </Link>
+                    <Link to='/' onClick={() => {logout()}}>
+                        <a>
+                            <FaPowerOff className="i" />
+                            <div>Cerrar session</div>
+                        </a>
+                    </Link>
                 </li>
             </ul>
         </div>

@@ -1,9 +1,11 @@
 import { createContext, useContext, useState } from "react";
-import { createTaskRequest, 
+import { 
+        createTaskRequest, 
         getTasksRequest, 
         deleteTaskRequest, 
         getTaskRequest, 
-        updateTaskRequest 
+        updateTaskRequest,
+        getTasksCompleteRequest
     } from "../api/tasks.js";
 
     const TaskContext = createContext();
@@ -31,9 +33,22 @@ import { createTaskRequest,
             }
         }
 
+        const getTasksComplete = async () => {
+            try {
+                const res = await getTasksCompleteRequest();
+                setTasks(res.data);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
         const createTask = async (task) => {
-            const res = await createTaskRequest(task);
-            console.log(res);
+            try {
+                const res = await createTaskRequest(task);
+                console.log(res);
+            } catch (error) {
+                console.log(error);
+            }
         }
 
         const deleteTask = async (id) => {
@@ -54,6 +69,7 @@ import { createTaskRequest,
             }
         }
         
+        
         const updateTask = async (id, task) => {
             try {
                 await updateTaskRequest(id, task);
@@ -70,6 +86,7 @@ import { createTaskRequest,
                 deleteTask,
                 getTask,
                 updateTask,
+                getTasksComplete
             }}>
                 {children}
             </TaskContext.Provider>

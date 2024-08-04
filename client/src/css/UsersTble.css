@@ -91,6 +91,24 @@ tr:hover td{
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.info {
+    font-size: 35px;
+    color: #555555;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.noti {
+    font-size: 35px;
+    color: #1e21d3;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.edit {
+    font-size: 35px;
+    color: #d6da13;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 583px){
     .main{
         width: 100%;

@@ -4,6 +4,7 @@ function Panel() {
   return (
     <div>
       <Navbar />
+      <div>hola</div>
     </div>
   )
 }

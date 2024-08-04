@@ -2,6 +2,8 @@ import axios from "./axios.js";
 
 export const getTasksRequest = () => axios.get('/tasks');
 
+export const getTasksCompleteRequest = () => axios.get('/history');
+
 export const getTaskRequest = (id) => axios.get(`/tasks/${id}`);
 
 export const createTaskRequest = (task) => axios.post('/tasks', task);
